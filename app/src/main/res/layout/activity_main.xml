@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+ android:orientation="vertical"
+    tools:context="koushik.com.imageedit.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start editing"
+        android:id="@+id/textView" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:text="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="go"
+        android:id="@+id/button2"
+
+
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginBottom="20dp"
+    />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="crop"
+        android:text="crop" />
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_below="@+id/button3"
+    android:id="@+id/compleateimage"
+    android:elevation="20dp"
+    android:background="@color/adobe_csdk_ripple_effect_color"
+    android:orientation="vertical"
+    android:layout_gravity="center" >
+
+
+        <koushik.com.imageedit.view.CustomImageView
+            android:id="@+id/customImageVIew1"
+            android:layout_width="300dp"
+            android:layout_height="320dp"
+
+            android:layout_gravity="center"
+
+            android:scaleType="matrix"
+            />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+
+
+        android:fontFamily="casual"
+
+        android:background="@null"
+        android:layout_gravity="center"
+        android:id="@+id/editText" />
+</LinearLayout>
+
+
+
+    <Button
+        android:text="print"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="createimage"
+        android:id="@+id/button4" />
+
+
+</LinearLayout>
